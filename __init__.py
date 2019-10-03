@@ -40,8 +40,8 @@ class PicroftGoogleAiyVoicekit(MycroftSkill):
             self.log.warning("Cant initialize GPIO - skill will not load")
             self.speak_dialog("error.initialise")
         finally:
-            self.schedule_repeating_event(self.handle_button,
-                                          None, 0.1, 'GoogleAIY')
+           # self.schedule_repeating_event(self.handle_button,
+           #                               None, 0.1, 'GoogleAIY')
             self.add_event('recognizer_loop:record_begin',
                            self.handle_listener_started)
             self.add_event('recognizer_loop:record_end',
